@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JavaScript by Lorraine</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <label>请输入南京今天空气质量指数：<input id="aqi-input" type="text"></label>
+    <button id="button" onclick="weatherInput()">确认填写</button>
+
+    <div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+
+    <script type="text/javascript">
+
+function weatherInput() {
+  /*
+  在注释下方写下代码
+  给按钮button绑定一个点击事件
+  在事件处理函数中
+  获取aqi-input输入的值，并显示在aqi-display中
+  */
+    var mychar = document.getElementById("aqi-input");
+    var mystr = document.getElementById("aqi-display");
+    mystr.innerHTML = isNaN(num = Number(mychar.value.trim() || "~")) ? "请输入数字" : num;
+
+};
+
+    </script>
+</body>
+</html>
